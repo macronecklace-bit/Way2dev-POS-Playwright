@@ -23,3 +23,10 @@ Then('I should be able to logout successfully', async function () {
 Then('I verify home page texts', async function () {
   await this.loginPage.assertTitle();
 });
+When('I click on the Forgot Password link', async function () {
+  await this.loginPage.clickForgotPassword();
+});
+
+Then('I should see the Reset Password messages', async function () {
+  await this.loginPage.assertResetPasswordMessages();
+});
