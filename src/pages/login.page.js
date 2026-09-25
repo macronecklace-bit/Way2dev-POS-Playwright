@@ -27,7 +27,7 @@ class LoginPage {
     console.log(`Actual page title: ${actualTitle}`);
     assert.equal(actualTitle, 'Way2dev POS - Hotel Billing System');
     assert.equal(await this.page.locator('h2').textContent(), 'Welcome back');
-    assert.equal(await this.page.locator('p').first().textContent(), 'Sign in to your account to continue');
+    assert.equal(await this.page.locator('h2 + p').textContent(), 'Sign in to your account to continue');
   }
 
   async clickForgotPassword() {
